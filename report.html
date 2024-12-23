@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./report.css">
+	<link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <title>貪吃蛇</title>
+</head>
+<body>
+    <h1 id="game-title">貪吃蛇</h1>
+    <div id="game-container">
+        <canvas id="game" width="400" height="400"></canvas>
+    </div>
+	<div id="stats-container">
+		<div id="score-display">分數: 0</div>
+		<div id="timer-display"></div>
+	</div>
+	<div id="volume-controls">
+		<div class="control-group">
+			<label for="bgm-volume">背景音樂音量:</label>
+			<input id="bgm-volume" type="range" min="0" max="1" step="0.1" value="0.5">
+		</div>
+		<div class="control-group">
+			<label for="sfx-volume">音效音量:</label>
+			<input id="sfx-volume" type="range" min="0" max="1" step="0.1" value="0.7">
+		</div>
+		<div class="control-group bgm-button-container">
+			<button id="bgm-toggle">背景音樂：播放</button>
+		</div>
+	</div>
+	
+    <h2>跟朋友PK，得到最高分吧！</h2>
+	<div id="theme-selector">
+		<button class="theme-btn grass" onclick="applyTheme('grass')">草地</button>
+		<button class="theme-btn night" onclick="applyTheme('night')">夜晚</button>
+		<button class="theme-btn ocean" onclick="applyTheme('ocean')">海洋</button>
+	</div>
+    <script src="app.js"></script>
+</body>
